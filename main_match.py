@@ -91,7 +91,7 @@ def comprehensive_match(names_file, database_file, selected_columns):
         result_row = {
             "الاسم الأصلي": original_name,
             "الاسم المطابق": match_data["اسم الموظف"] if match_data and "اسم الموظف" in match_data else "",
-            "نسبة التطابق": f"{round(best_score)}%" if best_score else "",
+            "نسبة التطابق": f"{round(best_score)}%" if match_data else "", # السطر الذي تم تعديله
             "ملاحظة": "✅ تطابق دقيق" if match_data else "❌ لم يتم العثور على تطابق"
         }
         
